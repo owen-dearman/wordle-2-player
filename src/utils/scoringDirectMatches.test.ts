@@ -103,7 +103,13 @@ describe("suite of tests concerning scoringDirectMatches() function", () => {
   test("empty strings should return empty object in result", () => {
     expect(scoringDirectMatches("", "")).toStrictEqual({
       guess: "",
-      result: {},
+      result: {
+        1: { letter: "", match: "NONE" },
+        2: { letter: "", match: "NONE" },
+        3: { letter: "", match: "NONE" },
+        4: { letter: "", match: "NONE" },
+        5: { letter: "", match: "NONE" },
+      },
     });
   });
 });
