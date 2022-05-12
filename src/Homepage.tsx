@@ -1,7 +1,18 @@
-export function Homepage(): JSX.Element {
+import { navigationOptions } from "./Content";
+
+interface HomepageProps {
+  setNav: (arg0: navigationOptions) => void;
+}
+
+export function Homepage(props: HomepageProps): JSX.Element {
   return (
     <section>
-      <button className="startButton">S T A R T</button>
+      <button
+        className="startButton"
+        onClick={() => props.setNav("createTarget")}
+      >
+        S T A R T
+      </button>
       <h2>How To Play: </h2>
       <ol>
         <li>Click start</li>
