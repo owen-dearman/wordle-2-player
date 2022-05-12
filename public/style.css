@@ -22,9 +22,22 @@ footer p{
     margin-top: -8px;
 }
 
+header {
+    display: flex;
+    flex-direction: column;
+}
+
 .headerContainer{
+    background-color: black;
+    justify-content: space-around;
     display: inline-flex;
     padding: 10px;
+}
+
+.headerSubContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .pageTitle {
@@ -38,11 +51,16 @@ footer p{
 }
 
 .logo{
-    width: 25%;
-    height: auto
+    object-fit: contain;
+    width: 20%;
 }
 
 .subtitle{
+    color:#00e603;
     text-align: center;
     padding: 0px 10px;
+}
+
+.subtitle:hover{
+    color: #ffe66d;
 }
