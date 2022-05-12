@@ -11,6 +11,7 @@ export function CreateTargetWord({setTargetWord, setNav}: CreateTargetWordProps)
   function handleSubmit(){
     if (word.length === 5){
       setTargetWord(word)
+      setWord("")
       setNav("guessTarget")
     }else {
       window.alert("Your word must be 5 letters long! Have you ever played Wordle 🤦")
