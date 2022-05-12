@@ -6,6 +6,7 @@ import { Homepage } from "./Homepage";
 type navigationOptions = "home" | "createTarget" | "guessTarget";
 
 export function Content(): JSX.Element {
+  //eslint-disable-next-line
   const [navigation, setNavigation] = useState<navigationOptions>("home");
   return (
     <>

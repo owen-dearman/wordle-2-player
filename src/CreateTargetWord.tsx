@@ -1,3 +1,3 @@
-export function CreateTargetWord() {
+export function CreateTargetWord(): JSX.Element {
   return <div></div>;
 }
