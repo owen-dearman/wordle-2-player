@@ -11,7 +11,8 @@ export function Footer(): JSX.Element {
           target="_blank"
         >
           here
-        </a>.
+        </a>
+        .
       </p>
       <p>
         This app is associated in no way to{" "}
