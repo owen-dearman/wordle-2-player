@@ -4,24 +4,25 @@ import { navigationOptions } from "./Content";
 interface CreateTargetWordProps {
   setTargetWord: (arg0: string) => void;
   setNav: (arg0: navigationOptions) => void;
+  setTriggerRerender: (arg0: boolean) => void;
+  triggerRerender: boolean;
 }
 
-export function CreateTargetWord({
-  setTargetWord,
-  setNav,
-}: CreateTargetWordProps): JSX.Element {
+export function CreateTargetWord(props: CreateTargetWordProps): JSX.Element {
+  const [word, setWord] = useState<string>("");
+
   function handleSubmit() {
     if (word.length === 5) {
-      setTargetWord(word);
+      props.setTargetWord(word);
       setWord("");
-      setNav("guessTarget");
+      props.setTriggerRerender(!props.triggerRerender)
+      props.setNav("guessTarget");
     } else {
       window.alert(
         "Your word must be 5 letters long! Have you ever played Wordle 🤦"
       );
     }
   }
-  const [word, setWord] = useState<string>("");
 
   return (
     <section>

@@ -11,7 +11,7 @@ export function Homepage(props: HomepageProps): JSX.Element {
         className="startButton"
         onClick={() => props.setNav("createTarget")}
       >
-        S T A R T
+        <strong>S T A R T</strong>
       </button>
       <h2>How To Play: </h2>
       <ol>

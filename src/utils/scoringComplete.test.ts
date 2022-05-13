@@ -2,7 +2,7 @@ import { completeScoring } from "./scoringComplete";
 
 describe("suite of tests concerning completeScoring()", () => {
   test("a guess should be correctly marked against the target word", () => {
-    expect(completeScoring("place", "place")).toStrictEqual({
+    expect(completeScoring("PLACE", "PLACE")).toStrictEqual({
       guess: "PLACE",
       result: {
         1: { letter: "P", match: "DIRECT" },

@@ -25,8 +25,8 @@ export function scoringDirectMatches(
     5: { letter: "", match: "NONE" },
   };
   for (let i = 0; i < hiddenTarget.length; i++) {
-    const guessedLetter = guess[i].toUpperCase();
-    const targetLetter = hiddenTarget[i].toUpperCase();
+    const guessedLetter = guess[i];
+    const targetLetter = hiddenTarget[i];
     const currentIndexOfTargetWord = i + 1;
     if (isDirectMatch(guessedLetter, targetLetter)) {
       dictOfDirectMatches[
@@ -55,5 +55,5 @@ export function scoringDirectMatches(
  */
 
 export function isDirectMatch(letterA: string, letterB: string): boolean {
-  return letterA.toUpperCase() === letterB.toUpperCase();
+  return letterA === letterB;
 }

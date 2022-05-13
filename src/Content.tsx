@@ -7,7 +7,7 @@ export type navigationOptions = "home" | "createTarget" | "guessTarget";
 
 export function Content(): JSX.Element {
   const [navigation, setNavigation] = useState<navigationOptions>("home");
-  //eslint-disable-next-line
+  const [triggerRerender, setTriggerRerender] = useState<boolean>(true);
   const [targetWord, setTargetWord] = useState<string>("");
   return (
     <>
@@ -16,9 +16,17 @@ export function Content(): JSX.Element {
         <CreateTargetWord
           setTargetWord={setTargetWord}
           setNav={setNavigation}
+          setTriggerRerender={setTriggerRerender}
+          triggerRerender={triggerRerender}
         />
       )}
-      {navigation === "guessTarget" && <GuessTargetWord />}
+      {navigation === "guessTarget" && (
+        <GuessTargetWord
+          goal={targetWord}
+          setTriggerRerender={setTriggerRerender}
+          triggerRerender={triggerRerender}
+        />
+      )}
     </>
   );
 }

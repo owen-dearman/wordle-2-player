@@ -3,19 +3,19 @@ import { scoringDirectMatches, isDirectMatch } from "./scoringDirectMatches";
 describe("suite of tests concerning isDirectMatch() helper function", () => {
   test("isDirectMatch() should return true when letters match", () => {
     expect(isDirectMatch("A", "A")).toStrictEqual(true);
-    expect(isDirectMatch("g", "g")).toStrictEqual(true);
-    expect(isDirectMatch("z", "Z")).toStrictEqual(true);
+    expect(isDirectMatch("G", "G")).toStrictEqual(true);
+    expect(isDirectMatch("Z", "Z")).toStrictEqual(true);
   });
   test("isDirectMatch() should return false when letters do not match", () => {
-    expect(isDirectMatch("a", "b")).toStrictEqual(false);
-    expect(isDirectMatch("b", "c")).toStrictEqual(false);
-    expect(isDirectMatch("A", "b")).toStrictEqual(false);
+    expect(isDirectMatch("A", "B")).toStrictEqual(false);
+    expect(isDirectMatch("B", "C")).toStrictEqual(false);
+    expect(isDirectMatch("A", "B")).toStrictEqual(false);
   });
 });
 
 describe("suite of tests concerning scoringDirectMatches() function", () => {
   test("exactly identical words should return all direct matches", () => {
-    expect(scoringDirectMatches("place", "place")).toStrictEqual({
+    expect(scoringDirectMatches("PLACE", "PLACE")).toStrictEqual({
       guess: "PLACE",
       result: {
         1: { letter: "P", match: "DIRECT" },
@@ -35,7 +35,7 @@ describe("suite of tests concerning scoringDirectMatches() function", () => {
         5: { letter: "O", match: "DIRECT" },
       },
     });
-    expect(scoringDirectMatches("score", "SCORE")).toStrictEqual({
+    expect(scoringDirectMatches("SCORE", "SCORE")).toStrictEqual({
       guess: "SCORE",
       result: {
         1: { letter: "S", match: "DIRECT" },
@@ -47,7 +47,7 @@ describe("suite of tests concerning scoringDirectMatches() function", () => {
     });
   });
   test("words where only a few letters are direct matches should return correct marks", () => {
-    expect(scoringDirectMatches("place", "glare")).toStrictEqual({
+    expect(scoringDirectMatches("PLACE", "GLARE")).toStrictEqual({
       guess: "PLACE",
       result: {
         1: { letter: "P", match: "NONE" },
