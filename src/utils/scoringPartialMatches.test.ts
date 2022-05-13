@@ -1,3 +1,4 @@
+import { MarkedGuess } from "./scoringDirectMatches";
 import {
   scoringPartialMatches,
   removeDirectMatchesFromContention,
@@ -29,7 +30,7 @@ describe("suite of tests concerning checkForPartialMatch helper function", () =>
   });
 });
 
-const guessOf_place = {
+const guessOf_place: MarkedGuess = {
   guess: "PLACE",
   result: {
     1: { letter: "P", match: "NONE" },
@@ -39,7 +40,7 @@ const guessOf_place = {
     5: { letter: "E", match: "DIRECT" },
   },
 };
-const guessOf_train = {
+const guessOf_train: MarkedGuess = {
   guess: "TRAIN",
   result: {
     1: { letter: "T", match: "NONE" },
@@ -67,7 +68,7 @@ describe("suite of tests concerning removeDirectMatchedFromContention", () => {
   });
 });
 
-const guessOf_place2 = {
+const guessOf_place2: MarkedGuess = {
   guess: "PLACE",
   result: {
     1: { letter: "P", match: "NONE" },
@@ -77,7 +78,7 @@ const guessOf_place2 = {
     5: { letter: "E", match: "NONE" },
   },
 };
-const guessOf_scone = {
+const guessOf_scone: MarkedGuess = {
   guess: "SCONE",
   result: {
     1: { letter: "S", match: "NONE" },
@@ -87,7 +88,7 @@ const guessOf_scone = {
     5: { letter: "E", match: "DIRECT" },
   },
 };
-const guessOf_shape = {
+const guessOf_shape: MarkedGuess = {
   guess: "SHAPE",
   result: {
     1: { letter: "S", match: "NONE" },
@@ -97,7 +98,7 @@ const guessOf_shape = {
     5: { letter: "E", match: "DIRECT" },
   },
 };
-const guessOf_phase = {
+const guessOf_phase: MarkedGuess = {
   guess: "PHASE",
   result: {
     1: { letter: "P", match: "DIRECT" },

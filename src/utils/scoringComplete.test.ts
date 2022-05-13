@@ -42,5 +42,15 @@ describe("suite of tests concerning completeScoring()", () => {
         5: { letter: "S", match: "DIRECT" },
       },
     });
+    expect(completeScoring("LUCKY", "LEVEL")).toStrictEqual({
+      guess: "LUCKY",
+      result: {
+        1: { letter: "L", match: "DIRECT" },
+        2: { letter: "U", match: "NONE" },
+        3: { letter: "C", match: "NONE" },
+        4: { letter: "K", match: "NONE" },
+        5: { letter: "Y", match: "NONE" },
+      },
+    });
   });
 });
