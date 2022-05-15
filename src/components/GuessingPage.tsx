@@ -4,6 +4,7 @@ import { completeScoring } from "../utils/scoringComplete";
 import { MarkedGuess, usernameStore } from "../utils/interfaces";
 import { navigationOptions } from "./Content";
 import { Player1Wins } from "./Player1Wins";
+import axios from "axios";
 
 interface GuessingPageProps {
   markedGuesses: MarkedGuess[];
@@ -33,6 +34,19 @@ export function GuessingPage(props: GuessingPageProps): JSX.Element {
     }
   }
 
+  function checkWordExists(pickedWord: string) {
+    axios
+      .get(
+        `https://api.dictionaryapi.dev/api/v2/entries/en/${pickedWord.toLowerCase()}`
+      )
+      .then((response) => {
+        window.alert(
+          `${response.data[0].word} (${response.data[0].phonetic}) is a word :)`
+        );
+      })
+      .catch(() => window.alert("My little friend says that's not a word"));
+  }
+
   return (
     <section>
       {giveup ? (
@@ -45,8 +59,8 @@ export function GuessingPage(props: GuessingPageProps): JSX.Element {
       ) : (
         <div>
           <h1 className="playerTitle">
-            Enter Guess {props.markedGuesses.length + 1}{" "}
-            {props.usernames.player2}
+            {props.usernames.player2.toUpperCase()}, Enter Guess{" "}
+            {props.markedGuesses.length + 1}{" "}
           </h1>
           <div className="controls">
             <div className="controlButtons">
@@ -56,6 +70,7 @@ export function GuessingPage(props: GuessingPageProps): JSX.Element {
                 onChange={(e) => setGuess(e.target.value.toUpperCase())}
               />
               <button onClick={() => setGuess("")}>Clear</button>
+              <button onClick={() => checkWordExists(guess)}>Check</button>
               <button onClick={handleSubmit}>Submit</button>
             </div>
             <p>

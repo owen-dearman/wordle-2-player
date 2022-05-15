@@ -29,7 +29,9 @@ export function Homepage(props: HomepageProps): JSX.Element {
         <button
           className="startButton"
           onClick={() => {
-            props.setUsernames({ player1: player1, player2: player2 });
+            if (player1.length > 0 && player2.length > 0) {
+              props.setUsernames({ player1: player1, player2: player2 });
+            }
             props.setNav("createTarget");
           }}
         >

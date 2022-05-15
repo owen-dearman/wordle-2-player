@@ -45,7 +45,10 @@ export function CreateTargetWord(props: CreateTargetWordProps): JSX.Element {
 
   return (
     <section>
-      <h1 className="playerTitle"> Enter Word {props.usernames.player1}</h1>
+      <h1 className="playerTitle">
+        {" "}
+        {props.usernames.player1.toUpperCase()}, Enter Word
+      </h1>
       <div className="controls">
         <div className="controlButtons">
           <input
