@@ -21,6 +21,7 @@ export function Content(): JSX.Element {
       )}
       {navigation === "createTarget" && (
         <CreateTargetWord
+          usernames={usernames}
           setTargetWord={setTargetWord}
           setNav={setNavigation}
           setTriggerRerender={setTriggerRerender}
@@ -28,7 +29,11 @@ export function Content(): JSX.Element {
         />
       )}
       {navigation === "guessTarget" && (
-        <GuessTargetWord goal={targetWord} setNav={setNavigation} />
+        <GuessTargetWord
+          usernames={usernames}
+          goal={targetWord}
+          setNav={setNavigation}
+        />
       )}
     </>
   );

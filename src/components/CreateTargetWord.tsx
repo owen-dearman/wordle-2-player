@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { usernameStore } from "../utils/interfaces";
 import { navigationOptions } from "./Content";
 
 interface CreateTargetWordProps {
@@ -6,6 +7,7 @@ interface CreateTargetWordProps {
   setNav: (arg0: navigationOptions) => void;
   setTriggerRerender: (arg0: boolean) => void;
   triggerRerender: boolean;
+  usernames: usernameStore;
 }
 
 export function CreateTargetWord(props: CreateTargetWordProps): JSX.Element {
@@ -26,7 +28,7 @@ export function CreateTargetWord(props: CreateTargetWordProps): JSX.Element {
 
   return (
     <section>
-      <h1 className="playerTitle">PLAYER 1</h1>
+      <h1 className="playerTitle">{props.usernames.player1}:</h1>
       <div className="controls">
         <h2>Enter Word:</h2>
         <div className="controlButtons">

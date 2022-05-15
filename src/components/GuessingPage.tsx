@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { GuessGrid } from "./GuessGrid";
 import { completeScoring } from "../utils/scoringComplete";
-import { MarkedGuess } from "../utils/interfaces";
+import { MarkedGuess, usernameStore } from "../utils/interfaces";
 
 interface GuessingPageProps {
   markedGuesses: MarkedGuess[];
   setMarkedGuesses: (value: React.SetStateAction<MarkedGuess[]>) => void;
   goal: string;
+  usernames: usernameStore;
 }
 
 export function GuessingPage(props: GuessingPageProps): JSX.Element {
@@ -30,7 +31,7 @@ export function GuessingPage(props: GuessingPageProps): JSX.Element {
 
   return (
     <section>
-      <h1 className="playerTitle">PLAYER 2</h1>
+      <h1 className="playerTitle">{props.usernames.player2}</h1>
       <div className="controls">
         <h2>Enter Guess:</h2>
         <div className="controlButtons">
