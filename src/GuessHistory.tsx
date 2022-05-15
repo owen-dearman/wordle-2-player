@@ -1,27 +1,68 @@
 import { MarkedGuess } from "./utils/scoringDirectMatches";
 
-interface GuessHistoryProps{
-    markedGuesses: MarkedGuess[]
+interface GuessHistoryProps {
+  markedGuesses: MarkedGuess[];
 }
 
-export function GuessHistory(props: GuessHistoryProps): JSX.Element{
-  console.log(props.markedGuesses)
-  const markedGuessesDisplay = props.markedGuesses.map(createGradeRow)
+export function GuessHistory(props: GuessHistoryProps): JSX.Element {
+  const markedGuessesDisplay = props.markedGuesses.map(createGradeRow);
 
-  function createGradeRow(markObject: MarkedGuess){
-    const currentGuess = props.markedGuesses.indexOf(markObject) + 1
+  function createGradeRow(markObject: MarkedGuess) {
+    const currentGuess =
+      props.markedGuesses.length - props.markedGuesses.indexOf(markObject);
     return (
-      <div>
-        <h2>Guess {currentGuess}/6: {markObject.guess}</h2>
-        <p>{markObject.result[1].letter} : {markObject.result[1].match} </p>
-        <p>{markObject.result[2].letter} : {markObject.result[2].match} </p>
-        <p>{markObject.result[3].letter} : {markObject.result[3].match} </p>
-        <p>{markObject.result[4].letter} : {markObject.result[4].match} </p>
-        <p>{markObject.result[5].letter} : {markObject.result[5].match} </p>
+      <div key={`${markObject.guess} - ${Math.random}`} className="gridRow">
+        <h2>Guess {currentGuess}/6</h2>
+        <div className=" cellContainer">
+          {markObject.result[1].match === "DIRECT" ? (
+            <div className="gridCell_direct">{markObject.result[1].letter}</div>
+          ) : markObject.result[1].match === "PARTIAL" ? (
+            <div className="gridCell_partial">
+              {markObject.result[1].letter}
+            </div>
+          ) : (
+            <div className="gridCell_blank">{markObject.result[1].letter}</div>
+          )}
+          {markObject.result[2].match === "DIRECT" ? (
+            <div className="gridCell_direct">{markObject.result[2].letter}</div>
+          ) : markObject.result[2].match === "PARTIAL" ? (
+            <div className="gridCell_partial">
+              {markObject.result[2].letter}
+            </div>
+          ) : (
+            <div className="gridCell_blank">{markObject.result[2].letter}</div>
+          )}
+          {markObject.result[3].match === "DIRECT" ? (
+            <div className="gridCell_direct">{markObject.result[3].letter}</div>
+          ) : markObject.result[3].match === "PARTIAL" ? (
+            <div className="gridCell_partial">
+              {markObject.result[3].letter}
+            </div>
+          ) : (
+            <div className="gridCell_blank">{markObject.result[3].letter}</div>
+          )}
+          {markObject.result[4].match === "DIRECT" ? (
+            <div className="gridCell_direct">{markObject.result[4].letter}</div>
+          ) : markObject.result[4].match === "PARTIAL" ? (
+            <div className="gridCell_partial">
+              {markObject.result[4].letter}
+            </div>
+          ) : (
+            <div className="gridCell_blank">{markObject.result[4].letter}</div>
+          )}
+          {markObject.result[5].match === "DIRECT" ? (
+            <div className="gridCell_direct">{markObject.result[5].letter}</div>
+          ) : markObject.result[5].match === "PARTIAL" ? (
+            <div className="gridCell_partial">
+              {markObject.result[5].letter}
+            </div>
+          ) : (
+            <div className="gridCell_blank">{markObject.result[5].letter}</div>
+          )}
+        </div>
       </div>
-    )
+    );
   }
 
-    return <section>{markedGuessesDisplay}
-  </section>
+  return <section className="gridContainer">{markedGuessesDisplay}</section>;
 }

@@ -15,7 +15,7 @@ export function CreateTargetWord(props: CreateTargetWordProps): JSX.Element {
     if (word.length === 5) {
       props.setTargetWord(word);
       setWord("");
-      props.setTriggerRerender(!props.triggerRerender)
+      props.setTriggerRerender(!props.triggerRerender);
       props.setNav("guessTarget");
     } else {
       window.alert(

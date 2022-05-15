@@ -22,12 +22,15 @@ export function scoringPartialMatches(
       partiallyMarkedGuess.result[
         currentIndexOfTargetWord as keyof MarkedGuess["result"]
       ].letter;
-      const guessedLetterScore = partiallyMarkedGuess.result[currentIndexOfTargetWord as keyof MarkedGuess["result"]].match
+    const guessedLetterScore =
+      partiallyMarkedGuess.result[
+        currentIndexOfTargetWord as keyof MarkedGuess["result"]
+      ].match;
     const isPartialMatch = checkForPartialMatch(
       targetWordAccountability,
       guessedLetter
     );
-    if (isPartialMatch && guessedLetterScore !== "DIRECT" ) {
+    if (isPartialMatch && guessedLetterScore !== "DIRECT") {
       partiallyMarkedGuess.result[
         currentIndexOfTargetWord as keyof MarkedGuess["result"]
       ].match = "PARTIAL";
@@ -69,7 +72,7 @@ export function removeDirectMatchesFromContention(
 
 export function checkForPartialMatch(
   arrayOfLetters: string[],
-  letter: string,
+  letter: string
 ): boolean {
   return arrayOfLetters.includes(letter);
 }

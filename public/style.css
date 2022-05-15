@@ -87,3 +87,66 @@ header {
     color:#ffe66d;
     box-shadow: 0 12px 16px 0 rgb(255, 255, 255);
 }
+
+.gridContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.gridRow{
+ display: inline-flex;
+ font-size: 20px;
+ width: 100%;
+ padding-left: 10%;
+}
+
+.cellContainer{
+    display: flex;
+    font-size: 30px;
+    align-items: center;
+}
+
+.gridCell_direct{
+    display: flex;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 7px;
+    border: 5px solid rgb(0, 0, 0);
+    border-radius: 20%;
+    background-color:#00e603; 
+    color: black;
+    font-weight: 400;
+}
+
+.gridCell_partial{
+    display: flex;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 7px;
+    border: 5px solid rgb(0, 0, 0);
+    border-radius: 20%;
+    background-color:#ffe66d;
+    color: black;
+    font-weight: 200;
+}
+
+.gridCell_blank{
+ display: flex;
+ width: 50px;
+ height: 50px;
+ text-align: center;
+ justify-content: center;
+ align-items: center;
+ margin: 7px;
+ border: 5px solid rgb(0, 0, 0);
+ border-radius: 20%;
+ background-color:#ffffff; 
+ color: black;
+ font-weight: 100;
+}

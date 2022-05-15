@@ -12,24 +12,19 @@ interface GuessTargetWordProps {
 export function GuessTargetWord(props: GuessTargetWordProps): JSX.Element {
   const [guess, setGuess] = useState<string>("");
   const [markedGuesses, setMarkedGuesses] = useState<MarkedGuess[]>([]);
-  const [triggerMark, setTriggerMark] = useState<boolean>(true)
+  const [triggerMark, setTriggerMark] = useState<boolean>(true);
 
   async function handleSubmit() {
     if (guess.length === 5) {
       setGuess("");
-      setMarkedGuesses((prev) => [
-        ...prev,
-        completeScoring(guess, props.goal),
-      ]);
-      setTriggerMark(!triggerMark)
+      setMarkedGuesses((prev) => [completeScoring(guess, props.goal), ...prev]);
+      setTriggerMark(!triggerMark);
     } else {
       window.alert(
         "I don't think you'll do too well if you don't guess 5 letters..."
       );
     }
   }
- 
-
 
   return (
     <section>
