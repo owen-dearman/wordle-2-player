@@ -12,7 +12,7 @@ interface Player1WinsProps {
 export function Player1Wins(props: Player1WinsProps): JSX.Element {
   return (
     <div>
-      <h1 className="playerTitle">{props.usernames.player1} Wins!</h1>
+      <h1 className="playerTitle">Player 1: {props.usernames.player1} Wins!</h1>
       <h2 className="playerTitle">The Word Was: {props.goal}</h2>
       <div className="largeButtonContainer">
         <button className="homeButton" onClick={() => props.setNav("home")}>

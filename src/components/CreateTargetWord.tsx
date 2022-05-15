@@ -28,9 +28,8 @@ export function CreateTargetWord(props: CreateTargetWordProps): JSX.Element {
 
   return (
     <section>
-      <h1 className="playerTitle">{props.usernames.player1}:</h1>
+      <h1 className="playerTitle"> Enter Word {props.usernames.player1}</h1>
       <div className="controls">
-        <h2>Enter Word:</h2>
         <div className="controlButtons">
           <input
             value={word}

@@ -10,6 +10,7 @@ interface GuessTargetWordProps {
   goal: string;
   setNav: (arg0: navigationOptions) => void;
   usernames: usernameStore;
+  navigation: navigationOptions;
 }
 
 export function GuessTargetWord(props: GuessTargetWordProps): JSX.Element {
@@ -39,6 +40,7 @@ export function GuessTargetWord(props: GuessTargetWordProps): JSX.Element {
           setMarkedGuesses={setMarkedGuesses}
           goal={props.goal}
           usernames={props.usernames}
+          setNav={props.setNav}
         />
       )}
     </div>

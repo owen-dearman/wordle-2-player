@@ -38,14 +38,15 @@ export function Homepage(props: HomepageProps): JSX.Element {
       </div>
       <h2>How To Play: </h2>
       <ol>
-        <li>Click start</li>
+        <li>Input names and click start</li>
         <li>
           Player 1 inputs a 5-letter word into the game engine, keeping the word
           secret from Player 2
         </li>
         <li>Player 1 passes the device to Player 2</li>
         <li>
-          Player 2 attempts to correctly guess the word, by inputting a guess
+          Player 2 attempts to correctly guess the word, by inputting a 5-letter
+          word guess
         </li>
         <li>
           When an attempt has been input, it will be marked against Player 1's

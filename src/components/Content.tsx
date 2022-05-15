@@ -4,7 +4,11 @@ import { CreateTargetWord } from "./CreateTargetWord";
 import { GuessTargetWord } from "./GuessTargetWord";
 import { Homepage } from "./Homepage";
 
-export type navigationOptions = "home" | "createTarget" | "guessTarget";
+export type navigationOptions =
+  | "home"
+  | "createTarget"
+  | "guessTarget"
+  | "player1wins";
 
 export function Content(): JSX.Element {
   const [navigation, setNavigation] = useState<navigationOptions>("home");
@@ -33,6 +37,7 @@ export function Content(): JSX.Element {
           usernames={usernames}
           goal={targetWord}
           setNav={setNavigation}
+          navigation={navigation}
         />
       )}
     </>

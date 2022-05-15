@@ -11,7 +11,7 @@ interface Player2WinsProps {
 export function Player2Wins(props: Player2WinsProps): JSX.Element {
   return (
     <div>
-      <h1 className="playerTitle">{props.usernames.player2} Wins!</h1>
+      <h1 className="playerTitle">Player 2: {props.usernames.player2} Wins!</h1>
       <GuessGrid markedGuesses={props.markedGuesses} />
       <div className="largeButtonContainer">
         <button className="homeButton" onClick={() => props.setNav("home")}>
