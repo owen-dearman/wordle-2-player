@@ -72,6 +72,10 @@ header {
     color: #ffe66d;
 }
 
+.startButtonContainer{
+    text-align: center;
+}
+
 .startButton {
     background-color: #ffe66d;
     color:#00e603;
@@ -79,13 +83,13 @@ header {
     border:5px solid black;
     text-align: center;
     border-radius: 8px;
-    width: 100%
+    width: 80%;
+    justify-content: center;
 }
 
 .startButton:hover{
     background-color: #00e603;
     color:#ffe66d;
-    box-shadow: 0 12px 16px 0 rgb(255, 255, 255);
 }
 
 .playerTitle{

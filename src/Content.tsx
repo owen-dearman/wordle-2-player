@@ -21,11 +21,7 @@ export function Content(): JSX.Element {
         />
       )}
       {navigation === "guessTarget" && (
-        <GuessTargetWord
-          goal={targetWord}
-          setTriggerRerender={setTriggerRerender}
-          triggerRerender={triggerRerender}
-        />
+        <GuessTargetWord goal={targetWord} setNav={setNavigation} />
       )}
     </>
   );

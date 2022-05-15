@@ -7,12 +7,14 @@ interface HomepageProps {
 export function Homepage(props: HomepageProps): JSX.Element {
   return (
     <section>
-      <button
-        className="startButton"
-        onClick={() => props.setNav("createTarget")}
-      >
-        <strong>S T A R T</strong>
-      </button>
+      <div className="startButtonContainer">
+        <button
+          className="startButton"
+          onClick={() => props.setNav("createTarget")}
+        >
+          <strong>S T A R T</strong>
+        </button>
+      </div>
       <h2>How To Play: </h2>
       <ol>
         <li>Click start</li>
