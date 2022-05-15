@@ -20,9 +20,13 @@ export function GuessTargetWord(props: GuessTargetWordProps): JSX.Element {
   return (
     <div>
       {winningConditions && markedGuesses.length < 7 ? (
-        <Player2Wins />
+        <Player2Wins markedGuesses={markedGuesses} setNav={props.setNav} />
       ) : !winningConditions && markedGuesses.length === 6 ? (
-        <Player1Wins />
+        <Player1Wins
+          markedGuesses={markedGuesses}
+          goal={props.goal}
+          setNav={props.setNav}
+        />
       ) : (
         <GuessingPage
           markedGuesses={markedGuesses}

@@ -1,7 +1,7 @@
 export function Footer(): JSX.Element {
   return (
     <footer>
-      <hr></hr>
+      {" "}
       <p>Thank you for playing Battordle!</p>
       <p>
         This App was created by Owen Dearman (GitHub: @owen-dearman). The

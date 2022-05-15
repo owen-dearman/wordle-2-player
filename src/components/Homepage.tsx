@@ -7,7 +7,7 @@ interface HomepageProps {
 export function Homepage(props: HomepageProps): JSX.Element {
   return (
     <section>
-      <div className="startButtonContainer">
+      <div className="largeButtonContainer">
         <button
           className="startButton"
           onClick={() => props.setNav("createTarget")}
