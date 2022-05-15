@@ -26,17 +26,22 @@ export function CreateTargetWord(props: CreateTargetWordProps): JSX.Element {
 
   return (
     <section>
-      <h2>Enter Word:</h2>
-      <input
-        value={word}
-        maxLength={5}
-        onChange={(e) => setWord(e.target.value.toUpperCase())}
-      />
-      <button onClick={() => setWord("")}>Clear</button>
-      <button onClick={handleSubmit}>Submit</button>
-      <p>
-        Word Length: {word.length}/5 {word.length === 5 ? "✅" : "❌"}
-      </p>
+      <h1 className="playerTitle">PLAYER 1</h1>
+      <div className="controls">
+        <h2>Enter Word:</h2>
+        <div className="controlButtons">
+          <input
+            value={word}
+            maxLength={5}
+            onChange={(e) => setWord(e.target.value.toUpperCase())}
+          />
+          <button onClick={() => setWord("")}>Clear</button>
+          <button onClick={handleSubmit}>Submit</button>
+        </div>
+        <p>
+          Word Length: {word.length}/5 {word.length === 5 ? "✅" : "❌"}
+        </p>
+      </div>
     </section>
   );
 }

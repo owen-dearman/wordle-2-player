@@ -28,17 +28,23 @@ export function GuessTargetWord(props: GuessTargetWordProps): JSX.Element {
 
   return (
     <section>
-      <h2>Enter Guess:</h2>
-      <input
-        value={guess}
-        maxLength={5}
-        onChange={(e) => setGuess(e.target.value.toUpperCase())}
-      />
-      <button onClick={() => setGuess("")}>Clear</button>
-      <button onClick={handleSubmit}>Submit</button>
-      <p>
-        Word Length: {guess.length}/5 {guess.length === 5 ? "✅" : "❌"}
-      </p>
+      <h1 className="playerTitle">PLAYER 2</h1>
+      <div className="controls">
+        <h2>Enter Guess:</h2>
+        <div className="controlButtons">
+          <input
+            value={guess}
+            maxLength={5}
+            onChange={(e) => setGuess(e.target.value.toUpperCase())}
+          />
+          <button onClick={() => setGuess("")}>Clear</button>
+          <button onClick={handleSubmit}>Submit</button>
+        </div>
+        <p>
+          Guess Length: {guess.length}/5 {guess.length === 5 ? "✅" : "❌"}
+          Guesses Remaining: {6 - markedGuesses.length}
+        </p>
+      </div>
       <GuessHistory markedGuesses={markedGuesses} />
     </section>
   );

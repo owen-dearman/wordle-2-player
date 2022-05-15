@@ -88,6 +88,26 @@ header {
     box-shadow: 0 12px 16px 0 rgb(255, 255, 255);
 }
 
+.playerTitle{
+    text-align: center;
+    font-size: 50px;
+    color:#00e603;
+    font-weight: 700;
+}
+
+.controls{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.controlButtons{
+    display:flex;
+    flex-direction: row;
+    padding-top: -10px;
+}
+
 .gridContainer {
     display: flex;
     flex-direction: column;
@@ -97,7 +117,7 @@ header {
  display: inline-flex;
  font-size: 20px;
  width: 100%;
- padding-left: 10%;
+ justify-content: center;
 }
 
 .cellContainer{
