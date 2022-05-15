@@ -10,3 +10,11 @@ export interface MarkedGuess {
   guess: string;
   result: { [key in letterNumber]: { letter: string; match: markOptions } };
 }
+
+export interface failedCheck {
+  title: string;
+  message: string;
+  resolution: string;
+  word: string;
+  phonetic: string;
+}

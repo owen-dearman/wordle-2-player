@@ -10,7 +10,6 @@ interface GuessTargetWordProps {
   goal: string;
   setNav: (arg0: navigationOptions) => void;
   usernames: usernameStore;
-  navigation: navigationOptions;
 }
 
 export function GuessTargetWord(props: GuessTargetWordProps): JSX.Element {

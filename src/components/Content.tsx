@@ -37,7 +37,6 @@ export function Content(): JSX.Element {
           usernames={usernames}
           goal={targetWord}
           setNav={setNavigation}
-          navigation={navigation}
         />
       )}
     </>
