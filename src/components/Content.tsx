@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { usernameStore } from "../utils/interfaces";
 import { CreateTargetWord } from "./CreateTargetWord";
 import { GuessTargetWord } from "./GuessTargetWord";
 import { Homepage } from "./Homepage";
@@ -9,9 +10,15 @@ export function Content(): JSX.Element {
   const [navigation, setNavigation] = useState<navigationOptions>("home");
   const [triggerRerender, setTriggerRerender] = useState<boolean>(true);
   const [targetWord, setTargetWord] = useState<string>("");
+  const [usernames, setUsernames] = useState<usernameStore>({
+    player1: "Player 1",
+    player2: "Player 2",
+  });
   return (
     <>
-      {navigation === "home" && <Homepage setNav={setNavigation} />}
+      {navigation === "home" && (
+        <Homepage setNav={setNavigation} setUsernames={setUsernames} />
+      )}
       {navigation === "createTarget" && (
         <CreateTargetWord
           setTargetWord={setTargetWord}

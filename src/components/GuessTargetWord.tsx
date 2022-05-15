@@ -4,7 +4,7 @@ import { GuessingPage } from "./GuessingPage";
 import { Player1Wins } from "./Player1Wins";
 import { Player2Wins } from "./Player2Wins";
 import { isTargetWord } from "../utils/isTargetWord";
-import { MarkedGuess } from "../utils/scoringDirectMatches";
+import { MarkedGuess } from "../utils/interfaces";
 
 interface GuessTargetWordProps {
   goal: string;

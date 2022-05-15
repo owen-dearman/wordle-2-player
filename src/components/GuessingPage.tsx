@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { GuessGrid } from "./GuessGrid";
 import { completeScoring } from "../utils/scoringComplete";
-import { MarkedGuess } from "../utils/scoringDirectMatches";
+import { MarkedGuess } from "../utils/interfaces";
 
 interface GuessingPageProps {
   markedGuesses: MarkedGuess[];

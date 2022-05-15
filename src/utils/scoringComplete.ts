@@ -1,4 +1,5 @@
-import { MarkedGuess, scoringDirectMatches } from "./scoringDirectMatches";
+import { MarkedGuess } from "./interfaces";
+import { scoringDirectMatches } from "./scoringDirectMatches";
 import { scoringPartialMatches } from "./scoringPartialMatches";
 
 /**

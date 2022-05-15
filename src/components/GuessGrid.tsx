@@ -1,4 +1,4 @@
-import { MarkedGuess } from "../utils/scoringDirectMatches";
+import { MarkedGuess } from "../utils/interfaces";
 
 interface GuessHistoryProps {
   markedGuesses: MarkedGuess[];

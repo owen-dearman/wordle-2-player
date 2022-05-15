@@ -1,16 +1,37 @@
+import { useState } from "react";
+import { usernameStore } from "../utils/interfaces";
 import { navigationOptions } from "./Content";
 
 interface HomepageProps {
   setNav: (arg0: navigationOptions) => void;
+  setUsernames: (arg0: usernameStore) => void;
 }
 
 export function Homepage(props: HomepageProps): JSX.Element {
+  const [player1, setPlayer1] = useState<string>("");
+  const [player2, setPlayer2] = useState<string>("");
+
   return (
     <section>
+      <div className="controls">
+        <input
+          placeholder="Player 1 Name"
+          value={player1}
+          onChange={(e) => setPlayer1(e.target.value)}
+        ></input>
+        <input
+          placeholder="Player 2 Name"
+          value={player2}
+          onChange={(e) => setPlayer2(e.target.value)}
+        ></input>
+      </div>
       <div className="largeButtonContainer">
         <button
           className="startButton"
-          onClick={() => props.setNav("createTarget")}
+          onClick={() => {
+            props.setUsernames({ player1: player1, player2: player2 });
+            props.setNav("createTarget");
+          }}
         >
           <strong>S T A R T</strong>
         </button>

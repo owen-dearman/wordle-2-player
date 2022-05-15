@@ -106,6 +106,7 @@ header {
     flex-direction: column;
     width: 100%;
     align-items: center;
+    font-size: 30px;
 }
 
 .controlButtons{

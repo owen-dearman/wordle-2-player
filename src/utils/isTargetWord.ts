@@ -1,4 +1,4 @@
-import { MarkedGuess } from "./scoringDirectMatches";
+import { MarkedGuess } from "./interfaces";
 
 export function isTargetWord(guesses: MarkedGuess[]): boolean {
   for (const guess of guesses) {
