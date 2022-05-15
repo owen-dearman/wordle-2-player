@@ -16,6 +16,14 @@ export function Footer(): JSX.Element {
         .
       </p>
       <p>
+        The word checking functionality is conducted using dictionaryapi.dev. It
+        can be accessed{" "}
+        <a href="https://dictionaryapi.dev/" rel="noreferrer" target="_blank">
+          here
+        </a>
+        .
+      </p>
+      <p>
         This app is associated in no way to{" "}
         <a
           href="https://www.nytimes.com/games/wordle/index.html"
