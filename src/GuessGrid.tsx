@@ -4,7 +4,7 @@ interface GuessHistoryProps {
   markedGuesses: MarkedGuess[];
 }
 
-export function GuessHistory(props: GuessHistoryProps): JSX.Element {
+export function GuessGrid(props: GuessHistoryProps): JSX.Element {
   const markedGuessesDisplay = props.markedGuesses.map(createGradeRow);
 
   function createGradeRow(markObject: MarkedGuess) {
