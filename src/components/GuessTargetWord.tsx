@@ -3,8 +3,8 @@ import { navigationOptions } from "./Content";
 import { GuessingPage } from "./GuessingPage";
 import { Player1Wins } from "./Player1Wins";
 import { Player2Wins } from "./Player2Wins";
-import { isTargetWord } from "./utils/isTargetWord";
-import { MarkedGuess } from "./utils/scoringDirectMatches";
+import { isTargetWord } from "../utils/isTargetWord";
+import { MarkedGuess } from "../utils/scoringDirectMatches";
 
 interface GuessTargetWordProps {
   goal: string;
