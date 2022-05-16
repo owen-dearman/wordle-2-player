@@ -69,9 +69,18 @@ export function GuessingPage(props: GuessingPageProps): JSX.Element {
                 maxLength={5}
                 onChange={(e) => setGuess(e.target.value.toUpperCase())}
               />
-              <button onClick={() => setGuess("")}>Clear</button>
-              <button onClick={() => checkWordExists(guess)}>Check</button>
-              <button onClick={handleSubmit}>Submit</button>
+              <button className="otherButton" onClick={() => setGuess("")}>
+                Clear
+              </button>
+              <button
+                className="otherButton"
+                onClick={() => checkWordExists(guess)}
+              >
+                Check
+              </button>
+              <button className="otherButton" onClick={handleSubmit}>
+                Submit
+              </button>
             </div>
             <p>
               Guess Length: {guess.length}/5 {guess.length === 5 ? "✅" : "❌"}
@@ -80,7 +89,9 @@ export function GuessingPage(props: GuessingPageProps): JSX.Element {
           </div>
           <GuessGrid markedGuesses={props.markedGuesses} />
           <div className="largeButtonContainer">
-            <button onClick={() => setGiveup(true)}>Give Up?</button>
+            <button className="otherButton" onClick={() => setGiveup(true)}>
+              Give Up?
+            </button>
           </div>
         </div>
       )}

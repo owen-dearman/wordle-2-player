@@ -43,7 +43,7 @@ export function Homepage(props: HomepageProps): JSX.Element {
         <li>Input names and click start</li>
         <li>
           Player 1 inputs a 5-letter word into the game engine, keeping the word
-          secret from Player 2
+          secret from Player 2. Make sure to check the word is valid first!
         </li>
         <li>Player 1 passes the device to Player 2</li>
         <li>

@@ -85,7 +85,7 @@ header {
     border:5px solid black;
     text-align: center;
     border-radius: 8px;
-    width: 80%;
+    width: 50%;
     justify-content: center;
 }
 
@@ -192,4 +192,36 @@ header {
 .homeButton:hover{
     background-color: #00e603;
     color:#ffe66d;
+}
+
+.otherButton{
+    background-color: #00e603;
+    color: black;
+    font-weight: 300;
+    border: 1px solid black;
+}
+    
+input{
+    padding: 5px;
+    background-color: #ffe66d;
+    width: 40%;
+    font-size: 20px;
+
+}
+
+@media only screen and (max-width: 1000px) {
+    .pageTitle{
+        display: none
+    }
+
+    .subtitle{
+        display:none
+    }
+    .headerSubContainer{
+        display:none
+    }
+    .logoContainer{
+        display:flex;
+        justify-content: center;
+    }
 }

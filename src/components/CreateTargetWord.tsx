@@ -57,6 +57,7 @@ export function CreateTargetWord(props: CreateTargetWordProps): JSX.Element {
             onChange={(e) => setWord(e.target.value.toUpperCase())}
           />
           <button
+            className="otherButton"
             onClick={() => {
               setWord("");
               setCont(false);
@@ -64,13 +65,24 @@ export function CreateTargetWord(props: CreateTargetWordProps): JSX.Element {
           >
             Clear
           </button>
-          <button onClick={() => checkWordExists(word)}>Check</button>
-          {cont && <button onClick={handleSubmit}>Submit</button>}
+          <button className="otherButton" onClick={() => checkWordExists(word)}>
+            Check
+          </button>
+          {cont && (
+            <button className="otherButton" onClick={handleSubmit}>
+              Submit
+            </button>
+          )}
         </div>
         <p>
           Word Length: {word.length}/5 {word.length === 5 ? "✅" : "❌"}
         </p>
       </div>
+      <p>
+        Use the check button to validate the word. We don't want{" "}
+        {props.usernames.player2} to have to guess "QZXVJ" do we? When you've
+        found a suitable word and checked it, whack the submit button!
+      </p>
     </section>
   );
 }
