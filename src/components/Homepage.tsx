@@ -61,7 +61,7 @@ export function Homepage(props: HomepageProps): JSX.Element {
           <em>Yellow: This is the correct letter in the wrong place</em>
         </p>
         <p>
-          <em>Black: This letter is not in the word</em>
+          <em>White: This letter is not in the word</em>
         </p>
         <li>
           If Player 2 guesses the correct word within 6 guesses, then they have
