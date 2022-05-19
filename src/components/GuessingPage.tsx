@@ -66,7 +66,8 @@ export function GuessingPage(props: GuessingPageProps): JSX.Element {
             <div className="controlButtons">
               <input
                 value={guess}
-                maxLength={5}
+                type="text"
+                maxLength={11}
                 onChange={(e) => setGuess(e.target.value.toUpperCase())}
               />
               <button className="otherButton" onClick={() => setGuess("")}>
