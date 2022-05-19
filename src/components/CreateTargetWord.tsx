@@ -53,6 +53,7 @@ export function CreateTargetWord(props: CreateTargetWordProps): JSX.Element {
         <div className="controlButtons">
           <input
             value={word}
+            type="text"
             maxLength={5}
             onChange={(e) => setWord(e.target.value.toUpperCase())}
           />
